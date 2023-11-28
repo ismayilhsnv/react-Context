@@ -1,8 +1,11 @@
 import React from 'react'
+import Cards from '../../../components/Site/Cards/Cards'
 
 const Home = () => {
   return (
-    <div></div>
+    <div>
+      <Cards/>
+    </div>
   )
 }
 

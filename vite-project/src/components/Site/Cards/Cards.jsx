@@ -1,9 +1,19 @@
-import React from 'react'
+
+import React, { useContext } from 'react';
+import Card from '../Card/Card';
+import MainContext from '../../../context';
+import './Cards.css'
 
 const Cards = () => {
+  const { filteredData } = useContext(MainContext);
+
   return (
-    <div>Cards</div>
-  )
+    <div className='cards'>
+      {filteredData.map((item, index) => (
+        <Card item={item} key={index} />
+      ))}
+    </div>
+  );
 }
 
-export default Cards
+export default Cards;
