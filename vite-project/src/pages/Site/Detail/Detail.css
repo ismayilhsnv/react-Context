@@ -3,21 +3,22 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    color:navy;
     height: 92.5vh;
-   
+    color: black;
     font-weight: 900;
     font-size: 19px;
 }
 .details img{
-    width: 600px;
-    height: 400px;
-    margin-right: 60%;
+    width: 1000px;
+    height: 600px;
+
 }
 .content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.link{
+    margin-top: 20px;
 }

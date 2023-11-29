@@ -1,0 +1,101 @@
+.footer1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10%;
+}
+.footer1__div1{
+    display: flex;
+    flex-direction: column;
+}
+.footer1__div1 a{
+    text-decoration: none;
+    color: gray;
+    margin-top: 5px;
+}
+.footer1__div1 a:hover{
+    color: red;
+    transition: 0.3s linear;
+}
+.footer1__div1  i{
+    font-size: 25px;
+}
+.footer1__div2{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.footer1__div2 h5{
+    margin-bottom: 10px;
+}
+.footer1__div2 a{
+    text-decoration: none;
+    color: gray;
+}
+.footer1__div2 a:hover{
+    border-bottom: 1px solid black;
+    transition: 0.3s linear;
+}
+.footer1__div3{
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.footer1__div3 a{
+    text-decoration: none;
+    color: gray;
+}
+.footer1__div3 a:hover{
+    border-bottom: 1px solid black;
+    transition: 0.3s linear;
+}
+.footer1__div4{
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.footer1__div4 a{
+    text-decoration: none;
+    color: gray;
+}
+.footer1__div4 a:hover{
+    border-bottom: 1px solid black;
+    transition: 0.3s linear;
+}
+.footer2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    margin-top: 20px;
+}
+.footer2__divp{
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+.footer2__icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.footer2__icons i{
+    font-size: 20px;
+    color: gray;
+}
+.footer2__icons i:hover{
+    color: orange;
+}
+.footer2__div2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.footer2__div2 i{
+    font-size: 35px;
+    color: gray;
+}
