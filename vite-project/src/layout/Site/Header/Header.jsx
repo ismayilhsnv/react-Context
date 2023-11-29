@@ -213,6 +213,9 @@ const Header = () => {
             
           </div>
         </li>
+        <li>
+          <Link style={{ color: 'orangered', textDecoration: 'none' }} to='/Basket'><i className="fa-solid fa-basket-shopping"></i></Link>
+        </li>
       </ul>
       <input className='header_div_inp' type="text" placeholder=' Search' onChange={(e) => searchData(e.target.value)} />
    

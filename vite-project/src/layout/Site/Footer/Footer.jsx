@@ -6,9 +6,9 @@ const Footer = () => {
       <div className='footer1'>
         <div className='footer1__div1'>
           <h2>SUPRO</h2>
-          <a href="#"><p><i class="fa-solid fa-location-dot"></i>184 Main Rd E, St Albans<br/>VIC 3021, Australia</p></a>
-          <a href="#"><p><i class="fa-regular fa-envelope"></i>contact@company.com</p></a>
-          <a href="#"><p><i class="fa-solid fa-phone"></i>+001 2233 456</p></a>
+          <a href="#"><p><i className="fa-solid fa-location-dot"></i>184 Main Rd E, St Albans<br/>VIC 3021, Australia</p></a>
+          <a href="#"><p><i className="fa-regular fa-envelope"></i>contact@company.com</p></a>
+          <a href="#"><p><i className="fa-solid fa-phone"></i>+001 2233 456</p></a>
         </div>
         <div className='footer1__div2'>
           <h5>HELP & INFORMATION</h5>
@@ -36,17 +36,17 @@ const Footer = () => {
           <p>Copyright © 2023 Magento, Inc. All rights reserved.</p>
         </div>       
         <div className='footer2__icons'>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
-          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i className="fa-brands fa-facebook"></i></a>
+          <a href="#"><i className="fa-brands fa-twitter"></i></a>
+          <a href="#"><i className="fa-brands fa-google-plus-g"></i></a>
+          <a href="#"><i className="fa-brands fa-pinterest-p"></i></a>
+          <a href="#"><i className="fa-brands fa-instagram"></i></a>
         </div>
         <div className='footer2__div2'>
-          <i class="fa-brands fa-cc-visa"></i>
-          <i class="fa-brands fa-cc-paypal"></i>
-          <i class="fa-brands fa-cc-discover"></i>
-          <i class="fa-brands fa-cc-amex"></i>
+          <i className="fa-brands fa-cc-visa"></i>
+          <i className="fa-brands fa-cc-paypal"></i>
+          <i className="fa-brands fa-cc-discover"></i>
+          <i className="fa-brands fa-cc-amex"></i>
         </div>
       </div>
       

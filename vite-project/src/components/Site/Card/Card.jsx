@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import MainContext from '../../../context';
 
 const Card = ({ item }) => {
-  const{addToFavorites}=useContext(MainContext)
+  const{addToFavorites,addBasket}=useContext(MainContext)
   return (
     <>
     <a href={`/${item.id}`}>
@@ -13,7 +13,9 @@ const Card = ({ item }) => {
 <img className="card-img-top" src={item.thumbnail} alt={item.title} />
 <div className="overlay">
   <p>Add to Favorites</p>
-  <Link onClick={(e) => { addToFavorites(item.id) }}>&#10084;</Link>
+  <Link  style={{fontSize:'20px' }}onClick={(e) => { addToFavorites(item.id) }}>&#10084;</Link>
+  <p>Add Basket</p>
+  <Link style={{ color: 'orange', textDecoration: 'none',fontSize:'20px' }} onClick={()=>{addBasket(item)}}><i className="fa-solid fa-basket-shopping"></i></Link>
 </div>
 <div className="card-body card-bodyy">
   <h5 className="card-title">{item.title}</h5>

@@ -2,6 +2,7 @@ import SiteRoot from "../pages/Site/SiteRoot";
 import Home from '../pages/Site/Home/Home';
 import Favorites from "../pages/Site/Favorites/Favorites";
 import Detail from '../pages/Site/Detail/Detail'
+import Basket from "../pages/Site/Basket/Basket";
 const Router=[{
     path:'/',
     element:<SiteRoot/>,
@@ -16,6 +17,10 @@ const Router=[{
     {
         path:'/:id',
         element:<Detail/>
+    },
+    {
+        path:'Basket',
+        element:<Basket/>
     }
 
 ]
