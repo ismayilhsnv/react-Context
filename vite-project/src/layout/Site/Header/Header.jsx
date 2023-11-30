@@ -4,7 +4,7 @@ import './Header.css';
 import MainContext from '../../../context';
 
 const Header = () => {
-  const { searchData } = useContext(MainContext);
+  const { searchData,homeCounter} = useContext(MainContext);
 
   return (
     <div className='um'>
@@ -213,9 +213,11 @@ const Header = () => {
             
           </div>
         </li>
-        <li>
+        <li style={{ position:'relative' }}>
           <Link style={{ color: 'orangered', textDecoration: 'none' }} to='/Basket'><i className="fa-solid fa-basket-shopping"></i></Link>
         </li>
+        <p style={{ color:'rgb(236, 88, 0)',position:'absolute',right:'41.2%'}}>{homeCounter}</p>
+       
       </ul>
       <input className='header_div_inp' type="text" placeholder=' Search' onChange={(e) => searchData(e.target.value)} />
    
@@ -235,6 +237,7 @@ const Header = () => {
     <a href="">Discover More</a>
 
    </div>
+
     
     </div>
     

@@ -13,7 +13,8 @@ function App() {
   const [data, setData] = useState([]);
   const [filteredData,setFilteredData]=useState([])
   const [basket, setBasket]=useState(localStorage.getItem('basket')?JSON.parse(localStorage.getItem('basket')):[])
-  const [homeCounter,setHomeCounter]=useState(localStorage.getItem("counter")? parseInt(localStorage.getItem("counter")):0)
+  const [homeCounter,setHomeCounter]=useState(localStorage.getItem("counter")? Math.max(0,parseInt(localStorage.getItem("counter"))):0)
+ 
   const[totalPrice,setTotalPrice]=useState(0)
   const [favorites, setFavorites] = useState(
     localStorage.getItem('favorites')
@@ -44,7 +45,7 @@ function App() {
       setFavorites(updatedFavorites);
       localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
   
-      toast.success('Əlavə olundu');
+      toast.success(' Fovoritesə əlavə olundu');
     } else {
       Swal.fire({
         icon: 'info',
@@ -62,7 +63,9 @@ function App() {
       setBasket([...basket,newItem])
       setHomeCounter(homeCounter+1)
       localStorage.setItem('basket',JSON.stringify([...basket,newItem]))
+      
       localStorage.setItem("counter",homeCounter+1)
+      toast.success('Basketə əlavə olundu');
     }
     else{
       setHomeCounter(homeCounter+1)
@@ -70,6 +73,7 @@ function App() {
       const newData={...item, count:target.count +1,totalPrice:item.price * (target.count+1)}
       setBasket([...basket.filter(element=>element.id !=item.id),newData])
       localStorage.setItem('basket', JSON.stringify([...basket.filter(element=>element.id != item.id),newData]))
+      toast.success('Basketə əlavə olundu');
     }
   }
   
@@ -85,18 +89,29 @@ function App() {
     localStorage.setItem("basket",JSON.stringify(updatedata))
 
 }
-const handleDecrease=(item)=>{
-  let updatedata=[...basket]
-  let target=updatedata.find(prod=>prod.id==item.id)
-  setHomeCounter(homeCounter-1)
-  localStorage.setItem("counter",homeCounter-1)
-  target.count-=1
-  target.totalPrice=item.price * target.count
-    
-  setBasket(updatedata)
-  localStorage.setItem("basket",JSON.stringify(updatedata))
 
-}
+
+const handleDecrease = (item) => {
+  let updatedata = [...basket];
+  let target = updatedata.find((prod) => prod.id === item.id);
+
+  if (target.count > 1) {
+    setHomeCounter(homeCounter - 1);
+    localStorage.setItem("counter", homeCounter - 1);
+    target.count -= 1;
+    target.totalPrice = item.price * target.count;
+    setBasket(updatedata);
+    localStorage.setItem("basket", JSON.stringify(updatedata));
+  }
+   else {
+    setHomeCounter(homeCounter - 1);
+    localStorage.setItem("counter", homeCounter - 1);
+    updatedata = updatedata.filter((prod) => prod.id !== item.id);
+    setBasket(updatedata);
+    localStorage.setItem("basket", JSON.stringify(updatedata));
+  }
+};
+
 
   const searchData = (searchValue) => {
     setFilteredData([...data.filter((item) => item.title.toLowerCase().trim().includes(searchValue.trim().toLowerCase()))])
@@ -118,4 +133,3 @@ const handleDecrease=(item)=>{
 }
 
 export default App;
-
